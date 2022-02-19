@@ -127,7 +127,7 @@ section.hero {
         font-weight: 400;
         font-size: 2.5rem;
         text-align: center;
-        padding-top: 5.7em;
+        padding-top: 2.5em;
 
         span {
           font-weight: bold;
@@ -141,7 +141,7 @@ section.hero {
       svg.down-arrow {
         position: absolute;
         bottom: 2.5em;
-        width: 3em;
+        width: 2em;
         z-index: 999;
         // animation: moveArrow 1s alternate-reverse infinite;
       }
