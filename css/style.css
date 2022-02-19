@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@400;700&family=Poppins:wght@400;700&family=Ubuntu:wght@400;700&display=swap");
+:root {
+  --primary-color: #007af3;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Hind", sans-serif;
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: black;
+}
+
+h2 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin: 1em 0;
+}
+
+section {
+  padding: 5em 2em;
+}
+
+.logo {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  color: black;
+}
+
+.logo span {
+  color: var(--primary-color);
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.938);
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 50%;
+  z-index: 999;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+
+nav ul {
+  text-transform: uppercase;
+  list-style-type: none;
+  padding: 0%;
+  margin-top: 8em;
+}
+
+nav ul a {
+  color: white;
+  padding: 0.75em 2em;
+  display: block;
+  width: 100%;
+}
+
+nav ul a:hover {
+  font-weight: bold;
+}
+
+nav .close {
+  float: right;
+  margin: 2em;
+  width: 2.5em;
+  cursor: pointer;
+}
+
+nav .close path {
+  fill: white;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 2em 2em;
+}
+
+header .menu {
+  width: 2em;
+  cursor: pointer;
+}
+
+section.hero {
+  color: black;
+  height: 90vh;
+  padding: 0;
+}
+
+section.hero .container {
+  position: relative;
+  height: inherit;
+}
+
+section.hero .container .hero-img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+section.hero .container .hero-img img {
+  height: 15vh;
+  width: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+section.hero .container .content {
+  width: 70%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.hero .container .content h1 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 2.5rem;
+  text-align: center;
+  padding-top: 5.7em;
+}
+
+section.hero .container .content h1 span {
+  font-weight: bold;
+}
+
+section.hero .container .content p {
+  font-size: 1.4rem;
+}
+
+section.hero .container .content svg.down-arrow {
+  position: absolute;
+  bottom: 2.5em;
+  width: 3em;
+  z-index: 999;
+}
+
+section.work img {
+  display: none;
+}
+
+section.work .experience {
+  margin-bottom: 2em;
+}
+
+section.work .position {
+  font-weight: bold;
+  margin: 0;
+}
+
+section.work .duration {
+  font-size: smaller;
+  font-style: italic;
+  margin: 0;
+}
+
+section.work .job-desc {
+  margin: 0;
+  padding: 0 1em;
+}
+
+section.work .job-desc li {
+  line-height: 1.5em;
+}
+
+section.projects img {
+  display: none;
+}
+
+section.projects .entries {
+  margin-bottom: 2em;
+}
+
+section.projects .project-name {
+  font-weight: bold;
+  margin: 0;
+}
+
+section.projects .role {
+  font-size: smaller;
+  font-style: italic;
+  margin: 0;
+}
+
+section.projects .proj-desc {
+  margin: 0;
+  padding: 0.5em 1em;
+}
+
+section.projects .proj-desc li {
+  line-height: 1.5em;
+}
+
+section.contact {
+  background-color: #efefef;
+}
+
+section.contact label {
+  display: block;
+  font-size: 1.2em;
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+}
+
+section.contact input,
+section.contact textarea {
+  width: 100%;
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border-radius: 0.3em;
+  border: 1px solid gray;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+section.contact input[type="submit"] {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.3em;
+  border: 3px solid var(--primary-color);
+  margin-bottom: 5em;
+  border-radius: 1em;
+  display: inline-block;
+  padding: 0.8em 2em;
+  width: unset;
+  cursor: pointer;
+}
+
+section.contact input[type="submit"]:hover {
+  color: white;
+  background-color: var(--primary-color);
+}
+
+@media only screen and (min-width: 768px) {
+  .menu,
+  .close {
+    display: none;
+  }
+  nav {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    position: unset;
+    display: block;
+    width: auto;
+    height: auto;
+    background: none;
+  }
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+  }
+  nav ul a {
+    color: black;
+    padding: 0.5em 1.5em;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+    text-transform: none;
+  }
+  nav ul a:hover {
+    background: none;
+    font-weight: 400;
+    text-decoration: underline;
+  }
+  section.hero .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+    grid-auto-flow: column;
+  }
+  section.hero .container .hero-img {
+    position: relative;
+    top: 0;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: left;
+    height: 15em;
+    width: 15em;
+  }
+  section.hero .container .hero-img img {
+    width: inherit;
+    height: inherit;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  section.hero .container .content {
+        grid-template-areas: "left right";
+  }
+  section.hero .container .content h1 {
+    padding-top: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,342 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@400;700&family=Poppins:wght@400;700&family=Ubuntu:wght@400;700&display=swap");
+
+:root {
+  --primary-color: #007af3;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Hind", sans-serif;
+  background-color: white;
+}
+
+// .wrapper {
+//   margin-top: 2em;
+// }
+
+a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: black;
+}
+
+h2 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin: 1em 0;
+}
+
+section {
+  padding: 5em 2em;
+}
+
+.logo {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  color: black;
+
+  span {
+    color: var(--primary-color);
+  }
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.938);
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 50%;
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+
+  ul {
+    text-transform: uppercase;
+    list-style-type: none;
+    padding: 0%;
+    margin-top: 8em;
+
+    a {
+      color: white;
+      padding: 0.75em 2em;
+      display: block;
+      width: 100%;
+
+      &:hover {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .close {
+    float: right;
+    margin: 2em;
+    width: 2.5em;
+    cursor: pointer;
+
+    path {
+      fill: white;
+    }
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 2em 2em;
+
+  .menu {
+    width: 2em;
+    cursor: pointer;
+  }
+}
+
+section.hero {
+  color: black;
+  height: 90vh;
+  padding: 0;
+
+  .container {
+    position: relative;
+    height: inherit;
+
+    .hero-img {
+      position: absolute;
+      top: 0;
+      width: 100%;
+
+      img {
+        height: 15vh;
+        width: inherit;
+        object-fit: cover;
+      }
+    }
+
+    .content {
+      width: 70%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h1 {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 400;
+        font-size: 2.5rem;
+        text-align: center;
+        padding-top: 5.7em;
+
+        span {
+          font-weight: bold;
+        }
+      }
+
+      p {
+        font-size: 1.4rem;
+      }
+
+      svg.down-arrow {
+        position: absolute;
+        bottom: 2.5em;
+        width: 3em;
+        z-index: 999;
+        // animation: moveArrow 1s alternate-reverse infinite;
+      }
+    }
+  }
+}
+
+section.work {
+  img {
+    display: none;
+  }
+
+  .experience {
+    margin-bottom: 2em;
+  }
+
+  .position {
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .duration {
+    font-size: smaller;
+    font-style: italic;
+    margin: 0;
+  }
+
+  .job-desc {
+    margin: 0;
+    padding: 0 1em;
+
+    li {
+      line-height: 1.5em;
+    }
+  }
+}
+
+section.projects {
+  img {
+    display: none;
+  }
+
+  .entries {
+    margin-bottom: 2em;
+  }
+
+  .project-name {
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .role {
+    font-size: smaller;
+    font-style: italic;
+    margin: 0;
+  }
+
+  .proj-desc {
+    margin: 0;
+    padding: 0.5em 1em;
+
+    li {
+      line-height: 1.5em;
+    }
+  }
+}
+
+section.contact {
+  background-color: #efefef;
+
+  label {
+    display: block;
+    font-size: 1.2em;
+    margin-top: 1em;
+    margin-bottom: 0.3em;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.8em;
+    margin-bottom: 1em;
+    border-radius: 0.3em;
+    border: 1px solid gray;
+    box-sizing: border-box;
+  }
+
+  input[type="submit"] {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.3em;
+    border: 3px solid var(--primary-color);
+    margin-bottom: 5em;
+    border-radius: 1em;
+    display: inline-block;
+    padding: 0.8em 2em;
+    width: unset;
+    cursor: pointer;
+
+    &:hover {
+      color: white;
+      background-color: var(--primary-color);
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .menu,
+  .close {
+    display: none;
+  }
+
+  nav {
+    transform: translateX(0);
+    position: unset;
+    display: block;
+    width: auto;
+    height: auto;
+    background: none;
+
+    ul {
+      display: flex;
+      margin: 0;
+
+      a {
+        color: black;
+        padding: 0.5em 1.5em;
+        font-family: "Poppins", sans-serif;
+        font-size: 0.9rem;
+        text-transform: none;
+
+        &:hover {
+          background: none;
+          font-weight: 400;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  section.hero {
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-auto-flow: column;
+      //   background-color: red;
+
+      .hero-img {
+        position: relative;
+        top: 0;
+        grid-area: left;
+        height: 15em;
+        width: 15em;
+
+        img {
+          width: inherit;
+          height: inherit;
+          object-fit: cover;
+        }
+      }
+
+      .content {
+        // background-color: green;
+        grid-template-areas: "left right";
+        //     width: 70%;
+        //     margin: 0 auto;
+        //     display: flex;
+        //     flex-direction: column;
+        //     align-items: center;
+
+        h1 {
+          //       font-family: "Ubuntu", sans-serif;
+          //       font-weight: 400;
+          //       font-size: 2.5rem;
+          //       text-align: center;
+          padding-top: 0;
+
+          //       span {
+          //         font-weight: bold;
+          //       }
+        }
+
+        //     p {
+        //       font-size: 1.4rem;
+        //     }
+
+        //     svg.down-arrow {
+        //       position: absolute;
+        //       bottom: 2.5em;
+        //       width: 3em;
+        //       z-index: 999;
+        //       // animation: moveArrow 1s alternate-reverse infinite;
+        //     }
+        //   }
+      }
+    }
+  }
+}
