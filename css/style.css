@@ -254,4 +254,66 @@ section.contact input[type="submit"]:hover {
   color: white;
   background-color: var(--primary-color);
 }
+
+@media only screen and (min-width: 768px) {
+  .menu,
+  .close {
+    display: none;
+  }
+  nav {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    position: unset;
+    display: block;
+    width: auto;
+    height: auto;
+    background: none;
+  }
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+  }
+  nav ul a {
+    color: black;
+    padding: 0.5em 1.5em;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+    text-transform: none;
+  }
+  nav ul a:hover {
+    background: none;
+    font-weight: 400;
+    text-decoration: underline;
+  }
+  section.hero .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+    grid-auto-flow: column;
+  }
+  section.hero .container .hero-img {
+    position: relative;
+    top: 0;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: left;
+    height: 15em;
+    width: 15em;
+  }
+  section.hero .container .hero-img img {
+    width: inherit;
+    height: inherit;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  section.hero .container .content {
+        grid-template-areas: "left right";
+  }
+  section.hero .container .content h1 {
+    padding-top: 0;
+  }
+}
 /*# sourceMappingURL=style.css.map */
