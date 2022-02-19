@@ -10,14 +10,21 @@ body {
   background-color: white;
 }
 
-.wrapper {
-  margin-top: 2em;
-}
-
 a {
   text-decoration: none;
   font-size: 1.3rem;
   color: black;
+}
+
+h2 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin: 1em 0;
+}
+
+section {
+  padding: 5em 2em;
 }
 
 .logo {
@@ -82,49 +89,169 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0 2em;
+  margin: 2em 2em;
 }
 
 header .menu {
   width: 2em;
-  margin-top: -0.5em;
   cursor: pointer;
 }
 
 section.hero {
-  background-color: red;
   color: black;
   height: 90vh;
+  padding: 0;
 }
 
 section.hero .container {
   position: relative;
+  height: inherit;
 }
 
-section.hero .container .hero-img img {
+section.hero .container .hero-img {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 10vh;
+}
+
+section.hero .container .hero-img img {
+  height: 15vh;
+  width: inherit;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-section.hero .container h1 {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 400;
-  font-size: 2rem;
-  text-align: center;
-  padding-top: 3em;
+section.hero .container .content {
+  width: 70%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-section.hero .container h1 span {
+section.hero .container .content h1 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 2.5rem;
+  text-align: center;
+  padding-top: 5.7em;
+}
+
+section.hero .container .content h1 span {
   font-weight: bold;
 }
 
-section.hero .container svg.down-arrow {
-  bottom: 0;
-  width: 2em;
+section.hero .container .content p {
+  font-size: 1.4rem;
+}
+
+section.hero .container .content svg.down-arrow {
+  position: absolute;
+  bottom: 2.5em;
+  width: 3em;
   z-index: 999;
+}
+
+section.work img {
+  display: none;
+}
+
+section.work .experience {
+  margin-bottom: 2em;
+}
+
+section.work .position {
+  font-weight: bold;
+  margin: 0;
+}
+
+section.work .duration {
+  font-size: smaller;
+  font-style: italic;
+  margin: 0;
+}
+
+section.work .job-desc {
+  margin: 0;
+  padding: 0 1em;
+}
+
+section.work .job-desc li {
+  line-height: 1.5em;
+}
+
+section.projects img {
+  display: none;
+}
+
+section.projects .entries {
+  margin-bottom: 2em;
+}
+
+section.projects .project-name {
+  font-weight: bold;
+  margin: 0;
+}
+
+section.projects .role {
+  font-size: smaller;
+  font-style: italic;
+  margin: 0;
+}
+
+section.projects .proj-desc {
+  margin: 0;
+  padding: 0.5em 1em;
+}
+
+section.projects .proj-desc li {
+  line-height: 1.5em;
+}
+
+section.contact {
+  background-color: #efefef;
+}
+
+section.contact label {
+  display: block;
+  font-size: 1.2em;
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+}
+
+section.contact input,
+section.contact textarea {
+  width: 100%;
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border-radius: 0.3em;
+  border: 1px solid gray;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+section.contact input[type="submit"] {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.3em;
+  border: 3px solid var(--primary-color);
+  margin-bottom: 5em;
+  border-radius: 1em;
+  display: inline-block;
+  padding: 0.8em 2em;
+  width: unset;
+  cursor: pointer;
+}
+
+section.contact input[type="submit"]:hover {
+  color: white;
+  background-color: var(--primary-color);
 }
 /*# sourceMappingURL=style.css.map */
