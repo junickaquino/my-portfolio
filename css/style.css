@@ -157,6 +157,7 @@ section.hero .container .content svg.down-arrow {
   bottom: 3em;
   width: 2em;
   z-index: 999;
+  animation: moveArrow 1s alternate-reverse infinite;
 }
 
 section.work img {
@@ -400,6 +401,28 @@ section.contact input[type="submit"]:hover {
   }
   section.work .experience .content {
     margin-left: 2em;
+  }
+}
+
+@-webkit-keyframes moveArrow {
+  from {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes moveArrow {
+  from {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 /*# sourceMappingURL=style.css.map */
