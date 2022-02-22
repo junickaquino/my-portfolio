@@ -256,6 +256,11 @@ section.contact input[type="submit"]:hover {
   background-color: var(--primary-color);
 }
 
+.open-nav {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
 @media only screen and (min-width: 768px) {
   .menu,
   .close {
