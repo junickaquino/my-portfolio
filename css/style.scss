@@ -29,7 +29,7 @@ h2 {
 }
 
 section {
-  padding: 5em 2em;
+  padding: 2em 2em;
 }
 
 .logo {
@@ -290,7 +290,6 @@ section.contact {
 
   section.hero {
     .hero-img {
-      background-color: blue;
       margin: 0 auto;
       position: relative;
       height: 15em;
@@ -323,6 +322,98 @@ section.contact {
           z-index: 999;
           // animation: moveArrow 1s alternate-reverse infinite;
         }
+      }
+    }
+  }
+
+  section.work {
+    img {
+      display: block;
+      width: 10em;
+      height: 5em;
+      object-fit: contain;
+    }
+
+    .experience {
+      margin-bottom: 2em;
+    }
+  }
+
+  section.contact {
+    width: 70%;
+    height: 70vh;
+    margin: 0 auto;
+    padding: 2em;
+  }
+}
+
+@media only screen and (min-width: 1450px) {
+  .wrapper {
+    width: 1450px;
+    margin: 0 auto;
+  }
+
+  section.hero {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "left right";
+    width: 90%;
+    margin: 0 auto;
+
+    .hero-img {
+      margin: 5em auto;
+      position: relative;
+      height: 35em;
+      width: 25em;
+
+      img {
+        width: inherit;
+        height: inherit;
+      }
+
+      .hero-img-shadow {
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        background-color: var(--primary-color);
+        right: -1em;
+        top: 1em;
+        z-index: -1;
+      }
+    }
+
+    .container {
+      padding-top: 5em;
+      grid-area: left;
+
+      .content {
+        margin-top: 5em;
+
+        svg.down-arrow {
+          position: absolute;
+          bottom: 5em;
+          width: 3em;
+          z-index: 999;
+          // animation: moveArrow 1s alternate-reverse infinite;
+        }
+      }
+    }
+  }
+
+  section.work {
+    img {
+      display: block;
+      width: 10em;
+      height: 5em;
+      object-fit: contain;
+    }
+
+    .experience {
+      display: flex;
+
+      .content {
+        margin-left: 2em;
       }
     }
   }

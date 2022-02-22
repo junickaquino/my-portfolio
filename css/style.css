@@ -24,7 +24,7 @@ h2 {
 }
 
 section {
-  padding: 5em 2em;
+  padding: 2em 2em;
 }
 
 .logo {
@@ -292,7 +292,6 @@ section.contact input[type="submit"]:hover {
     text-decoration: underline;
   }
   section.hero .hero-img {
-    background-color: blue;
     margin: 0 auto;
     position: relative;
     height: 15em;
@@ -319,6 +318,88 @@ section.contact input[type="submit"]:hover {
     bottom: 3em;
     width: 3em;
     z-index: 999;
+  }
+  section.work img {
+    display: block;
+    width: 10em;
+    height: 5em;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  section.work .experience {
+    margin-bottom: 2em;
+  }
+  section.contact {
+    width: 70%;
+    height: 70vh;
+    margin: 0 auto;
+    padding: 2em;
+  }
+}
+
+@media only screen and (min-width: 1450px) {
+  .wrapper {
+    width: 1450px;
+    margin: 0 auto;
+  }
+  section.hero {
+    display: -ms-grid;
+    display: grid;
+    grid-auto-flow: column;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "left right";
+    width: 90%;
+    margin: 0 auto;
+  }
+  section.hero .hero-img {
+    margin: 5em auto;
+    position: relative;
+    height: 35em;
+    width: 25em;
+  }
+  section.hero .hero-img img {
+    width: inherit;
+    height: inherit;
+  }
+  section.hero .hero-img .hero-img-shadow {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: var(--primary-color);
+    right: -1em;
+    top: 1em;
+    z-index: -1;
+  }
+  section.hero .container {
+    padding-top: 5em;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: left;
+  }
+  section.hero .container .content {
+    margin-top: 5em;
+  }
+  section.hero .container .content svg.down-arrow {
+    position: absolute;
+    bottom: 5em;
+    width: 3em;
+    z-index: 999;
+  }
+  section.work img {
+    display: block;
+    width: 10em;
+    height: 5em;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  section.work .experience {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  section.work .experience .content {
+    margin-left: 2em;
   }
 }
 /*# sourceMappingURL=style.css.map */
