@@ -29,7 +29,17 @@ h2 {
 }
 
 section {
-  padding: 5em 2em;
+  padding: 2em 2em;
+}
+
+footer {
+  margin-top: 2em;
+  font-size: 0.7rem;
+
+  p {
+    position: relative;
+    left: -3em;
+  }
 }
 
 .logo {
@@ -98,22 +108,23 @@ section.hero {
   color: black;
   height: 90vh;
   padding: 0;
+  position: relative;
+
+  .hero-img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    img {
+      height: 15vh;
+      width: inherit;
+      object-fit: cover;
+    }
+  }
 
   .container {
-    position: relative;
+    padding-top: 10em;
     height: inherit;
-
-    .hero-img {
-      position: absolute;
-      top: 0;
-      width: 100%;
-
-      img {
-        height: 15vh;
-        width: inherit;
-        object-fit: cover;
-      }
-    }
 
     .content {
       width: 70%;
@@ -127,7 +138,7 @@ section.hero {
         font-weight: 400;
         font-size: 2.5rem;
         text-align: center;
-        padding-top: 2.5em;
+        //padding-top: 2.5em;
 
         span {
           font-weight: bold;
@@ -140,10 +151,10 @@ section.hero {
 
       svg.down-arrow {
         position: absolute;
-        bottom: 2.5em;
+        bottom: 3em;
         width: 2em;
         z-index: 999;
-        // animation: moveArrow 1s alternate-reverse infinite;
+        animation: moveArrow 1s alternate-reverse infinite;
       }
     }
   }
@@ -248,10 +259,19 @@ section.contact {
   }
 }
 
+.open-nav {
+  transform: translateX(0);
+}
+
 @media only screen and (min-width: 768px) {
   .menu,
   .close {
     display: none;
+  }
+
+  .wrapper {
+    width: 90%;
+    margin: 0 auto;
   }
 
   nav {
@@ -283,60 +303,192 @@ section.contact {
   }
 
   section.hero {
-    .container {
-      display: grid;
-      grid-template-columns: repeat(2, auto);
-      grid-auto-flow: column;
-      //   background-color: red;
+    .hero-img {
+      margin: 0 auto;
+      position: relative;
+      height: 15em;
+      width: 15em;
 
-      .hero-img {
-        position: relative;
-        top: 0;
-        grid-area: left;
-        height: 15em;
-        width: 15em;
-
-        img {
-          width: inherit;
-          height: inherit;
-          object-fit: cover;
-        }
+      img {
+        width: inherit;
+        height: inherit;
       }
 
-      .content {
-        // background-color: green;
-        grid-template-areas: "left right";
-        //     width: 70%;
-        //     margin: 0 auto;
-        //     display: flex;
-        //     flex-direction: column;
-        //     align-items: center;
-
-        h1 {
-          //       font-family: "Ubuntu", sans-serif;
-          //       font-weight: 400;
-          //       font-size: 2.5rem;
-          //       text-align: center;
-          padding-top: 0;
-
-          //       span {
-          //         font-weight: bold;
-          //       }
-        }
-
-        //     p {
-        //       font-size: 1.4rem;
-        //     }
-
-        //     svg.down-arrow {
-        //       position: absolute;
-        //       bottom: 2.5em;
-        //       width: 3em;
-        //       z-index: 999;
-        //       // animation: moveArrow 1s alternate-reverse infinite;
-        //     }
-        //   }
+      .hero-img-shadow {
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        background-color: var(--primary-color);
+        right: -1em;
+        top: 1em;
+        z-index: -1;
       }
     }
+
+    .container {
+      padding-top: 5em;
+
+      .content {
+        svg.down-arrow {
+          position: absolute;
+          bottom: 3em;
+          width: 3em;
+          z-index: 999;
+          // animation: moveArrow 1s alternate-reverse infinite;
+        }
+      }
+    }
+  }
+
+  section.work {
+    img {
+      display: block;
+      width: 10em;
+      height: 5em;
+      object-fit: contain;
+    }
+
+    .experience {
+      margin-bottom: 2em;
+    }
+  }
+
+  section.contact {
+    width: 70%;
+    height: 80vh;
+    margin: 0 auto;
+    padding: 2em;
+  }
+}
+
+@media only screen and (min-width: 1450px) {
+  .wrapper {
+    width: 1450px;
+    margin: 0 auto;
+  }
+
+  section.hero {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "left right";
+    width: 90%;
+    margin: 0 auto;
+
+    .hero-img {
+      margin: 5em auto;
+      position: relative;
+      height: 35em;
+      width: 25em;
+
+      img {
+        width: inherit;
+        height: inherit;
+      }
+
+      .hero-img-shadow {
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        background-color: var(--primary-color);
+        right: -1em;
+        top: 1em;
+        z-index: -1;
+      }
+    }
+
+    .container {
+      padding-top: 5em;
+      grid-area: left;
+
+      .content {
+        margin-top: 5em;
+
+        svg.down-arrow {
+          position: absolute;
+          bottom: 5em;
+          width: 3em;
+          z-index: 999;
+          // animation: moveArrow 1s alternate-reverse infinite;
+        }
+      }
+    }
+  }
+
+  section.work {
+    position: relative;
+
+    img {
+      display: block;
+      width: 10em;
+      height: 5em;
+      object-fit: contain;
+    }
+
+    .experience {
+      display: flex;
+
+      .content {
+        margin-left: 2em;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 30%;
+      height: 20em;
+      background: var(--primary-color);
+      right: -10em;
+      bottom: -4em;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 200px;
+      height: 20em;
+      background: url("../images/dots\(black\).svg") no-repeat;
+      right: 0;
+      bottom: -1em;
+    }
+  }
+
+  section.projects {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 23%;
+      height: 20em;
+      background: var(--primary-color);
+      left: -10em;
+      bottom: -10em;
+      z-index: -1;
+      border-radius: 100%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 15%;
+      height: 13em;
+      background: var(--primary-color);
+      left: -10em;
+      top: 5em;
+      z-index: -1;
+      border-radius: 100%;
+    }
+  }
+}
+
+@keyframes moveArrow {
+  from {
+    transform: translateY(-30px);
+  }
+
+  to {
+    transform: translateY(0);
   }
 }
