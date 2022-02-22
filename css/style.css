@@ -101,24 +101,25 @@ section.hero {
   color: black;
   height: 90vh;
   padding: 0;
-}
-
-section.hero .container {
   position: relative;
-  height: inherit;
 }
 
-section.hero .container .hero-img {
+section.hero .hero-img {
   position: absolute;
   top: 0;
   width: 100%;
 }
 
-section.hero .container .hero-img img {
+section.hero .hero-img img {
   height: 15vh;
   width: inherit;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+section.hero .container {
+  padding-top: 10em;
+  height: inherit;
 }
 
 section.hero .container .content {
@@ -141,7 +142,6 @@ section.hero .container .content h1 {
   font-weight: 400;
   font-size: 2.5rem;
   text-align: center;
-  padding-top: 2.5em;
 }
 
 section.hero .container .content h1 span {
@@ -154,7 +154,7 @@ section.hero .container .content p {
 
 section.hero .container .content svg.down-arrow {
   position: absolute;
-  bottom: 2.5em;
+  bottom: 3em;
   width: 2em;
   z-index: 999;
 }
@@ -260,6 +260,10 @@ section.contact input[type="submit"]:hover {
   .close {
     display: none;
   }
+  .wrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
   nav {
     -webkit-transform: translateX(0);
             transform: translateX(0);
@@ -287,33 +291,34 @@ section.contact input[type="submit"]:hover {
     font-weight: 400;
     text-decoration: underline;
   }
-  section.hero .container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (auto)[2];
-        grid-template-columns: repeat(2, auto);
-    grid-auto-flow: column;
-  }
-  section.hero .container .hero-img {
+  section.hero .hero-img {
+    background-color: blue;
+    margin: 0 auto;
     position: relative;
-    top: 0;
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-area: left;
     height: 15em;
     width: 15em;
   }
-  section.hero .container .hero-img img {
+  section.hero .hero-img img {
     width: inherit;
     height: inherit;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
-  section.hero .container .content {
-        grid-template-areas: "left right";
+  section.hero .hero-img .hero-img-shadow {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: var(--primary-color);
+    right: -1em;
+    top: 1em;
+    z-index: -1;
   }
-  section.hero .container .content h1 {
-    padding-top: 0;
+  section.hero .container {
+    padding-top: 5em;
+  }
+  section.hero .container .content svg.down-arrow {
+    position: absolute;
+    bottom: 3em;
+    width: 3em;
+    z-index: 999;
   }
 }
 /*# sourceMappingURL=style.css.map */

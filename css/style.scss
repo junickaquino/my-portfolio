@@ -98,22 +98,23 @@ section.hero {
   color: black;
   height: 90vh;
   padding: 0;
+  position: relative;
+
+  .hero-img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    img {
+      height: 15vh;
+      width: inherit;
+      object-fit: cover;
+    }
+  }
 
   .container {
-    position: relative;
+    padding-top: 10em;
     height: inherit;
-
-    .hero-img {
-      position: absolute;
-      top: 0;
-      width: 100%;
-
-      img {
-        height: 15vh;
-        width: inherit;
-        object-fit: cover;
-      }
-    }
 
     .content {
       width: 70%;
@@ -127,7 +128,7 @@ section.hero {
         font-weight: 400;
         font-size: 2.5rem;
         text-align: center;
-        padding-top: 2.5em;
+        //padding-top: 2.5em;
 
         span {
           font-weight: bold;
@@ -140,7 +141,7 @@ section.hero {
 
       svg.down-arrow {
         position: absolute;
-        bottom: 2.5em;
+        bottom: 3em;
         width: 2em;
         z-index: 999;
         // animation: moveArrow 1s alternate-reverse infinite;
@@ -254,6 +255,11 @@ section.contact {
     display: none;
   }
 
+  .wrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+
   nav {
     transform: translateX(0);
     position: unset;
@@ -283,59 +289,40 @@ section.contact {
   }
 
   section.hero {
-    .container {
-      display: grid;
-      grid-template-columns: repeat(2, auto);
-      grid-auto-flow: column;
-      //   background-color: red;
+    .hero-img {
+      background-color: blue;
+      margin: 0 auto;
+      position: relative;
+      height: 15em;
+      width: 15em;
 
-      .hero-img {
-        position: relative;
-        top: 0;
-        grid-area: left;
-        height: 15em;
-        width: 15em;
-
-        img {
-          width: inherit;
-          height: inherit;
-          object-fit: cover;
-        }
+      img {
+        width: inherit;
+        height: inherit;
       }
 
+      .hero-img-shadow {
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        background-color: var(--primary-color);
+        right: -1em;
+        top: 1em;
+        z-index: -1;
+      }
+    }
+
+    .container {
+      padding-top: 5em;
+
       .content {
-        // background-color: green;
-        grid-template-areas: "left right";
-        //     width: 70%;
-        //     margin: 0 auto;
-        //     display: flex;
-        //     flex-direction: column;
-        //     align-items: center;
-
-        h1 {
-          //       font-family: "Ubuntu", sans-serif;
-          //       font-weight: 400;
-          //       font-size: 2.5rem;
-          //       text-align: center;
-          padding-top: 0;
-
-          //       span {
-          //         font-weight: bold;
-          //       }
+        svg.down-arrow {
+          position: absolute;
+          bottom: 3em;
+          width: 3em;
+          z-index: 999;
+          // animation: moveArrow 1s alternate-reverse infinite;
         }
-
-        //     p {
-        //       font-size: 1.4rem;
-        //     }
-
-        //     svg.down-arrow {
-        //       position: absolute;
-        //       bottom: 2.5em;
-        //       width: 3em;
-        //       z-index: 999;
-        //       // animation: moveArrow 1s alternate-reverse infinite;
-        //     }
-        //   }
       }
     }
   }
