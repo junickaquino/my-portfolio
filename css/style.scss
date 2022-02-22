@@ -32,6 +32,16 @@ section {
   padding: 2em 2em;
 }
 
+footer {
+  margin-top: 2em;
+  font-size: 0.7rem;
+
+  p {
+    position: relative;
+    left: -3em;
+  }
+}
+
 .logo {
   font-family: "Poppins", sans-serif;
   font-weight: bold;
